@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>DVDStore</title>
+        <link th:href="@{/css/style.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>DVD Store : LA boutique de DVD en ligne</h1>
+        <ul>
+            <li><a href="add-movie-form">Ajout de film</a></li>
+        </ul>
+
+        <section class="container">
+            <div class="left-half">
+                <article id="movie-list">
+
+                </article>
+            </div>
+            <div class="right-half">
+                <article id="movie-detail">
+
+                </article>
+            </div>
+        </section>
+
+        <script th:src="@{/js/script.js}" ></script>
+    </body>
+</html>
