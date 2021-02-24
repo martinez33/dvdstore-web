@@ -28,7 +28,7 @@ public class MovieResource implements MovieControllerInterface {
     }
 
     @GetMapping
-    public List<Movie> list(){
+    public Iterable<Movie> list(){
         System.out.println("La méthode displayHome a été invoquée");
         return movieServiceInterface.getMovieList();
     }
