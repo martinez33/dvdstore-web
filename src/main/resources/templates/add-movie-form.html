@@ -22,6 +22,10 @@
             <textarea th:field="*{description}" form="addMovieform"></textarea>
         </p>
         <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+        <p>Le prenom de l'acteur : <input type="text" th:field="*{firstName}"/></p>
+        <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+        <p>L nom de l'acteur : <input type="text" th:field="*{lastName}"/></p>
+        <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
         <input type="submit" value="OK" />
     </form>
 </body>

@@ -1,6 +1,7 @@
 package com.mycompany.dvdstore.web.controller;
 
 import com.mycompany.dvdstore.controller.MovieControllerInterface;
+import com.mycompany.dvdstore.entity.Actor;
 import com.mycompany.dvdstore.entity.Movie;
 import com.mycompany.dvdstore.service.MovieServiceInterface;
 import com.mycompany.dvdstore.web.form.MovieForm;
@@ -41,6 +42,8 @@ public class MovieController  implements MovieControllerInterface {
         movie.setTitle(movieForm.getTitle());
         movie.setGenre(movieForm.getGenre());
         movie.setDescription(movieForm.getDescription());
+        Actor actor = new Actor(movieForm.getFirstName(), movieForm.getLastName());
+        movie.setMainActor(actor);
         movieServiceInterface.registerMovie(movie);
         return "movie-added";
     }

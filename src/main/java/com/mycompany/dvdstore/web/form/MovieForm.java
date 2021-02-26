@@ -18,6 +18,13 @@ public class MovieForm {
     @Size(max=255, message="Entrez une description de 255 charactères au plus")
     private String description;
 
+    @NotBlank(message = "Le prenom est obligatoire")
+    @Size(max=20, message="Entrez un prenom de 20 charactères au plus")
+    private String firstName;
+
+    @Size(max=20, message="Entrez un nom de 20 charactères au plus")
+    private String lastName;
+
     public MovieForm() {
     }
 
@@ -51,5 +58,21 @@ public class MovieForm {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
